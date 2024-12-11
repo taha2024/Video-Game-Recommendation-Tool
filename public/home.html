@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Video Game Recommendation Tool</title>
+
+	<link rel="icon" href="controller.png" type="image/x-icon">
+
+	<style>
+		body {
+			background-color: #f5f5dc;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		#toolbar {
+			background-color: #161616;
+			color: #ffffff;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#toolbar .links {
+			display: flex;
+			align-items: center;
+		}
+
+		#toolbar a {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 5px;
+		}
+
+		#toolbar img {
+			width: 35px;
+			height: 35px;
+		}
+
+		#content {
+			padding: 20px;
+		}
+
+		.gameDivs {
+			background-color: #e8e8c7; 
+			border: 3px solid #ccc; 
+			padding: 20px; display: flex; 
+			overflow-x: auto; 
+			max-width: 100%;
+		}
+
+		.gameImg {
+			position: relative;
+			display: inline-block;
+		}
+
+		.addButton {
+			position: absolute;
+			bottom: 25px;
+			right: 25px;
+			background-color: #ffcc00;
+			color: #000000;
+			padding: 5px 10px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="toolbar">
+		<div class="links">
+			<a href="home">Home</a>
+			<a href="games">Games</a>
+			<a href="library">My Library</a>
+			<a href="survey">Survey</a>
+		</div>
+		<button id="signOutButton" onclick="signOut()">Sign Out</button>
+	</div>
+
+	<!-- The content div where the game information will be provided split into three sections giving users a variety of popular games to scroll through -->
+	<div id="content">
+		<h1 style="margin-top: 0;">Welcome to the Video Game Recommendation Tool!</h1><br />
+
+		<h2 style="text-align: center;">Top Games of the Week: </h2>
+		<div id="weekTopGames" class="gameDivs"></div><br /><br /><br /><br /><br />
+
+		<h2 style="text-align: center;">Top Releases of the Past Three Months: </h2>
+		<h3 id="mnthH0"></h3>
+		<div id="mnthTopGames0" class="gameDivs"></div><br />
+
+		<h3 id="mnthH1"></h3>
+		<div id="mnthTopGames1" class="gameDivs"></div><br />
+
+		<h3 id="mnthH2"></h3>
+		<div id="mnthTopGames2" class="gameDivs"></div><br />
+		
+		<br /><br /><br /><br /><br />
+
+		<h2 style="text-align: center;">Top Games Right Now: </h2>
+		<div id="currTopGames" class="gameDivs"></div>
+	</div>
+
+	<script src="home.js"></script>
+
+</body>
+
+</html>

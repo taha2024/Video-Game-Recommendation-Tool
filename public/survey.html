@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Video Game Recommendation Tool</title>
+
+	<link rel="icon" href="controller.png" type="image/x-icon">
+
+	<style>
+		body {
+			background-color: #f5f5dc;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		#toolbar {
+			background-color: #161616;
+			color: #ffffff;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#toolbar .links {
+			display: flex;
+			align-items: center;
+		}
+
+		#toolbar a {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 5px;
+		}
+
+		#toolbar img {
+			width: 35px;
+			height: 35px;
+		}
+
+		#content {
+			padding: 20px;
+		}
+
+		#info {
+			padding: 20px;
+		}
+
+		h1 {
+			margin-top: 0;
+		}
+
+		h1 {
+			margin-top: 0;
+		}
+
+		.gameImg {
+			position: relative;
+			display: inline-block;
+		}
+
+		.addButton {
+			position: absolute;
+			bottom: 25px;
+			right: 25px;
+			background-color: #ffcc00;
+			color: #000000;
+			padding: 5px 10px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		.percentage {
+			position: absolute;
+			bottom: 25px;
+			left: 25px;
+			background-color: #ffcc00;
+			color: #000000;
+			padding: 5px 10px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<script src="survey.js"></script>
+
+	<div id="toolbar">
+		<div class="links">
+			<a href="home">Home</a>
+			<a href="games">Games</a>
+			<a href="library">My Library</a>
+			<a href="survey">Survey</a>
+		</div>
+		<button id="signOutButton" onclick="signOut()">Sign Out</button>
+	</div>
+
+	<div id="info">
+		<h1>Complete Survey for Recommendations</h1>
+		<p>This page will recommend games once you have completed the survey. The number on the bottom left of each game is the recommendation score. Select three genres you are interested in and rate them on a scale of 1-5 to get recommendations.</p>
+	</div>
+	<div id="survey">
+		<div id="usergenres"></div><br /><br />
+		<div id="genres"></div><br /><br />
+		<button id="submitSurvey" onclick="submitSurvey()" style="display: block; margin: 0 auto;">Submit Genres</button>
+	</div><br /><br />
+	<div id="content"></div>
+
+</body>
+
+</html>
